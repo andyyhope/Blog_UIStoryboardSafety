@@ -1,4 +1,4 @@
-# UIStoryboard made safer with Protocol Extensions and Generics
+# UIStoryboard: Safer with Enums, Protocol Extensions and Generics
 ## Because String literals are so yucky.
 
 ### Medium post
