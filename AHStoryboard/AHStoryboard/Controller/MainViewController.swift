@@ -25,7 +25,7 @@ class MainViewController: UIViewController {
 
     @IBAction func pressMeForMagicButtonTapped(sender: AnyObject) {
         
-        let storyboard = UIStoryboard.storyboard(.News, bundle: nil)
+        let storyboard = UIStoryboard(storyboard: .News)
         
         let viewController = storyboard.instantiateViewController(ArticleViewController.self)
         

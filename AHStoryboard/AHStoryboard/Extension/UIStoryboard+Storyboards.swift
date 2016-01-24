@@ -21,22 +21,14 @@ extension UIStoryboard {
     
     /// Convenience Initializers
     
-    convenience init(storyboard: Storyboard) {
-        self.init(storyboard: storyboard, bundle: nil)
-    }
-    
-    convenience init(storyboard: Storyboard, bundle: NSBundle?) {
+    convenience init(storyboard: Storyboard, bundle: NSBundle? = nil) {
         self.init(name: storyboard.rawValue, bundle: bundle)
     }
     
     
     /// Class Functions
     
-    class func storyboard(storyboard: Storyboard) -> UIStoryboard {
-        return UIStoryboard.storyboard(storyboard, bundle: nil)
-    }
-    
-    class func storyboard(storyboard: Storyboard, bundle: NSBundle?) -> UIStoryboard {
+    class func storyboard(storyboard: Storyboard, bundle: NSBundle? = nil) -> UIStoryboard {
         return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
     }
     
