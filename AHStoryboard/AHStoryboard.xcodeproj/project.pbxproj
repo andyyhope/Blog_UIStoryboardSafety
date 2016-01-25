@@ -15,7 +15,7 @@
 		666256931C4E35E300081F62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666256911C4E35E300081F62 /* LaunchScreen.storyboard */; };
 		6662569B1C4E362C00081F62 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6662569A1C4E362C00081F62 /* News.storyboard */; };
 		6662569D1C4E364000081F62 /* Gallery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6662569C1C4E364000081F62 /* Gallery.storyboard */; };
-		666256A71C4E37A600081F62 /* StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666256A61C4E37A600081F62 /* StoryboardIdentifier.swift */; };
+		666256A71C4E37A600081F62 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666256A61C4E37A600081F62 /* StoryboardIdentifiable.swift */; };
 		66C2DE351C4F71610058A016 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2DE341C4F71610058A016 /* ArticleViewController.swift */; };
 		66C2DE371C4F8D950058A016 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2DE361C4F8D950058A016 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		666256941C4E35E300081F62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6662569A1C4E362C00081F62 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = News.storyboard; path = Storyboard/News.storyboard; sourceTree = "<group>"; };
 		6662569C1C4E364000081F62 /* Gallery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Gallery.storyboard; path = Storyboard/Gallery.storyboard; sourceTree = "<group>"; };
-		666256A61C4E37A600081F62 /* StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifier.swift; path = Protocol/StoryboardIdentifier.swift; sourceTree = "<group>"; };
+		666256A61C4E37A600081F62 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifiable.swift; path = Protocol/StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		66C2DE341C4F71610058A016 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleViewController.swift; path = Controller/ArticleViewController.swift; sourceTree = "<group>"; };
 		66C2DE361C4F8D950058A016 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controller/MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +100,7 @@
 		666256A41C4E36B900081F62 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				666256A61C4E37A600081F62 /* StoryboardIdentifier.swift */,
+				666256A61C4E37A600081F62 /* StoryboardIdentifiable.swift */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			files = (
 				66C2DE371C4F8D950058A016 /* MainViewController.swift in Sources */,
 				66C2DE351C4F71610058A016 /* ArticleViewController.swift in Sources */,
-				666256A71C4E37A600081F62 /* StoryboardIdentifier.swift in Sources */,
+				666256A71C4E37A600081F62 /* StoryboardIdentifiable.swift in Sources */,
 				666256891C4E35E300081F62 /* AppDelegate.swift in Sources */,
 				6641892E1C4E390B009F8FC9 /* UIViewController+StoryboardIdentifier.swift in Sources */,
 				6641892C1C4E3839009F8FC9 /* UIStoryboard+Storyboards.swift in Sources */,

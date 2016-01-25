@@ -34,8 +34,18 @@ extension UIStoryboard {
     
     
     /// View Controller Instantiation from Generics
+    /// Old Way:
     
     func instantiateViewController<T: UIViewController where T: StoryboardIdentifiable>(_: T.Type) -> T {
+        guard let viewController = self.instantiateViewControllerWithIdentifier(T.storyboardIdentifier) as? T else {
+            fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
+        }
+        
+        return viewController
+    }
+    
+    /// New Way
+    func instantiateViewController<T: UIViewController where T: StoryboardIdentifiable>() -> T {
         guard let viewController = self.instantiateViewControllerWithIdentifier(T.storyboardIdentifier) as? T else {
             fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
         }

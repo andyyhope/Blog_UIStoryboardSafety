@@ -27,7 +27,11 @@ class MainViewController: UIViewController {
         
         let storyboard = UIStoryboard(storyboard: .News)
         
-        let viewController = storyboard.instantiateViewController(ArticleViewController.self)
+        // Old way
+//        let viewController = storyboard.instantiateViewController(ArticleViewController)
+        
+        // Updated way
+        let viewController: ArticleViewController = storyboard.instantiateViewController()
         
         viewController.printHeadline()
         
