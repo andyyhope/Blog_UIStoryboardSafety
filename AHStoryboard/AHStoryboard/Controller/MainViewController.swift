@@ -23,18 +23,14 @@ class MainViewController: UIViewController {
     }
     
 
-    @IBAction func pressMeForMagicButtonTapped(sender: AnyObject) {
+    @IBAction func pressMeForMagicButtonTapped(_ sender: AnyObject) {
         
-        let storyboard = UIStoryboard(storyboard: .News)
-        
-        // Old way
-//        let viewController = storyboard.instantiateViewController(ArticleViewController)
-        
-        // Updated way
+        let storyboard = UIStoryboard(storyboard: .news)
+
         let viewController: ArticleViewController = storyboard.instantiateViewController()
         
         viewController.printHeadline()
         
-        presentViewController(viewController, animated: true, completion: nil)
+        present(viewController, animated: true, completion: nil)
     }
 }

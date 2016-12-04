@@ -12,41 +12,35 @@ extension UIStoryboard {
     
     /// The uniform place where we state all the storyboard we have in our application
     
-    enum Storyboard : String {
-        case Main
-        case News
-        case Gallery
-    }
-    
-    
-    /// Convenience Initializers
-    
-    convenience init(storyboard: Storyboard, bundle: NSBundle? = nil) {
-        self.init(name: storyboard.rawValue, bundle: bundle)
-    }
-    
-    
-    /// Class Functions
-    
-    class func storyboard(storyboard: Storyboard, bundle: NSBundle? = nil) -> UIStoryboard {
-        return UIStoryboard(name: storyboard.rawValue, bundle: bundle)
-    }
-    
-    
-    /// View Controller Instantiation from Generics
-    /// Old Way:
-    
-    func instantiateViewController<T: UIViewController where T: StoryboardIdentifiable>(_: T.Type) -> T {
-        guard let viewController = self.instantiateViewControllerWithIdentifier(T.storyboardIdentifier) as? T else {
-            fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
-        }
+    enum Storyboard: String {
+        case main
+        case news
+        case gallery
         
-        return viewController
+        var filename: String {
+            return rawValue.capitalized
+        }
     }
     
-    /// New Way
-    func instantiateViewController<T: UIViewController where T: StoryboardIdentifiable>() -> T {
-        guard let viewController = self.instantiateViewControllerWithIdentifier(T.storyboardIdentifier) as? T else {
+    
+    // MARK: - Convenience Initializers
+    
+    convenience init(storyboard: Storyboard, bundle: Bundle? = nil) {
+        self.init(name: storyboard.filename, bundle: bundle)
+    }
+    
+    
+    // MARK: - Class Functions
+    
+    class func storyboard(_ storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
+        return UIStoryboard(name: storyboard.filename, bundle: bundle)
+    }
+    
+    
+    // MARK: - View Controller Instantiation from Generics
+    
+    func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
+        guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
             fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
         }
         

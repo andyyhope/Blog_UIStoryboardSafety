@@ -22,8 +22,8 @@ class ArticleViewController: UIViewController {
         print("HEADLINE: Objective-C dies peacefully in sleep")
     }
     
-    @IBAction func dismissMeButtonTapped(sender: AnyObject) {
+    @IBAction func dismissMeButtonTapped(_ sender: AnyObject) {
         
-        dismissViewControllerAnimated(true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }
