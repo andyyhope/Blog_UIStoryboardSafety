@@ -24,7 +24,7 @@ Into this:
 ````
 let storyboard = UIStoryboard.storyboard(.News)
 
-let viewController = storyboard.instantiateViewController(ArticleViewController.self)
+let viewController: ArticleViewController = storyboard.instantiateViewController()
 
 viewController.printHeadline()
 ````
